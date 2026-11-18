@@ -1,22 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
-    <h1>Olá, Django com Template!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eius, laudantium quod consequatur, deleniti tempore illum omnis ad sit assumenda eaque unde. Architecto, quis voluptates exercitationem assumenda fuga dignissimos deserunt?</p>
+{% extends '_base.html' %}
 
-    <h3>Seu nome é {{ name }} e tem {{ age }} anos!</h3>
+{% block content %}
+<section>
 
-    {# Lista uma fruta de cada vez #}
-    <h3>Minhas frutas favoritas</h3>
+    <h2 class="mb-4">Postagens</h2>
 
-    {% for fruit in fruits %}
-    <div>{{ fruit }}</div>
-    {% endfor %}
+    <div class="alert alert-secondary p-2 text-end">
+        <small><em>{{ total_posts }} postagens no total</em></small>
+    </div>
 
-    <!-- Acabou! -->
-</body>
-</html>
+    <div class="row mt-3">
+
+        {# Loop para iterar cada postagem #}
+        {% for post in posts %}
+
+        <div class="pb-3 col-12 col-sm-6 col-lg-4">
+
+            <div class="card h-100">
+                <img class="card-img-top w-100" src="{{ post.thumbnail }}" alt="{{ post.title }}">
+                <div class="card-body d-flex flex-column gap-3">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text flex-grow-1">{{ post.summary }}</p>
+                </div>
+                <div class="card-footer d-grid text-center">
+                    <a href="#{{ post.id }}">Ver post</a>
+                </div>
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        {# `empty` acontece quando o iterable `post` está vazio #}
+        <p>Nenhum post cadastrado ainda.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+{% endblock %}
+
+{% block aside %}{% endblock %}

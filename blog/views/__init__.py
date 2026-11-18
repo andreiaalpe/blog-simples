@@ -1,2 +1,2 @@
-from .home import home           # ← Já existe
-from .contacts import contacts   # ← Adicione
+from .home import home
+from .contacts import contacts

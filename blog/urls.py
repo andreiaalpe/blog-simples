@@ -2,6 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),                   # ← Rota da página inicial que já existe
-    path('contacts/', views.contacts, name='contacts'),  # ← Adicionamos a rota para `contacts` aqui
+    # Rota para página inicial
+    path('', views.home, name='home'),
+
+    # Rota para a página de contatos
+    path('contacts/', views.contacts, name='contacts'),
 ]

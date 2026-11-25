@@ -1,3 +1,5 @@
+/* blog\static\css\style.css */
+ 
 body { background-color: rgb(23, 91, 94); }
 a { color: steelblue; text-decoration: none; }
 a:hover { color: orangered; }
@@ -10,13 +12,32 @@ body>footer { margin-top: .7rem; }
 .footer-top a:hover { color: var(--bs-warning); }
 .footer-botton a { color: var(--bs-light); }
 .footer-botton a:hover { color: var(--bs-warning); }
-.main-article-section { border-radius: .4rem; }
-.main-aside { border-radius: .4rem; }
+.main-article-section { border-radius: .4rem .4rem 0 0; }
+.main-aside { border-radius: 0 0 .4rem .4rem; }
 .login-out { border-top: 1px dotted grey; border-bottom: 1px dotted grey; }
 .login-out img { width: 2rem; height: 2rem; }
 .login-out a { color: rgb(177, 177, 177); }
 .login-out a:hover { color: var(--bs-white); }
+.profile-auto-width { width: 100%; margin: auto; }
+@media screen and (min-width: 576px) {
+    /* sm */
+    .auto-width { width: 90%; }
+}
 @media screen and (min-width: 768px) {
-    .main-aside { min-width: 250px; max-width: 250px; }
+    /* md */
+    .main-aside { min-width: 250px; max-width: 250px; border-radius: 0 .4rem .4rem 0; }
+    .main-article-section { border-radius: .4rem 0 0 .4rem; }
     .login-out { border: none; }
+    .profile-auto-width { width: 100%; }
+}
+@media screen and (min-width: 992px) {
+    /* lg */
+    .profile-auto-width { width: 75%; }
+}
+@media screen and (min-width: 1200px) {
+    /* xg */
+    .profile-auto-width { width: 50%; }
+}
+@media screen and (min-width: 1400px) {
+    /* xxg */
 }

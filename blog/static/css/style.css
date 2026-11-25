@@ -12,6 +12,11 @@ body>footer { margin-top: .7rem; }
 .footer-botton a:hover { color: var(--bs-warning); }
 .main-article-section { border-radius: .4rem; }
 .main-aside { border-radius: .4rem; }
+.login-out { border-top: 1px dotted grey; border-bottom: 1px dotted grey; }
+.login-out img { width: 2rem; height: 2rem; }
+.login-out a { color: rgb(177, 177, 177); }
+.login-out a:hover { color: var(--bs-white); }
 @media screen and (min-width: 768px) {
     .main-aside { min-width: 250px; max-width: 250px; }
+    .login-out { border: none; }
 }

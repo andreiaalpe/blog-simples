@@ -1,5 +1,4 @@
-a { color: steelblue; text-decoration: none; }
-a:hover { color: orangered; }body { background-color: rgb(23, 91, 94); }
+body { background-color: rgb(23, 91, 94); }
 a { color: steelblue; text-decoration: none; }
 a:hover { color: orangered; }
 body>header { background-color: orange; margin-top: 4.5rem; }
@@ -11,9 +10,8 @@ body>footer { margin-top: .7rem; }
 .footer-top a:hover { color: var(--bs-warning); }
 .footer-botton a { color: var(--bs-light); }
 .footer-botton a:hover { color: var(--bs-warning); }
-.main-article-section { border-radius: .4rem .4rem 0 0; }
-.main-aside { border-radius: 0 0 .4rem .4rem; }
+.main-article-section { border-radius: .4rem; }
+.main-aside { border-radius: .4rem; }
 @media screen and (min-width: 768px) {
-    .main-aside { min-width: 250px; max-width: 250px; border-radius: 0 .4rem .4rem 0; }
-    .main-article-section { border-radius: .4rem 0 0 .4rem; }
+    .main-aside { min-width: 250px; max-width: 250px; }
 }

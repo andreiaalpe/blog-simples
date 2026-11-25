@@ -10,24 +10,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
     <title>Blog</title>
-    <style>
-        body { background-color: rgb(23, 91, 94); }
-        .navbar-brand { font-size: 1.5rem; }
-        body>header { background-color: orange; margin-top: 4.5rem; }
-        body>header i { font-size: 4rem; }
-        body>main { margin-top: .8rem; }
-        body>footer { margin-top: .7rem; }
-        .footer-top a { color: rgb(132, 191, 240); text-decoration: none; margin-left: .7rem; }
-        .footer-top a:hover { color: var(--bs-warning); }
-        .footer-botton a { color: var(--bs-light); }
-        .footer-botton a:hover { color: var(--bs-warning); }
-        .main-article-section { border-radius: .4rem .4rem 0 0; }
-        .main-aside { border-radius: 0 0 .4rem .4rem; }
-        @media screen and (min-width: 768px) {
-            .main-aside { min-width: 250px; max-width: 250px; border-radius: 0 .4rem .4rem 0; }
-            .main-article-section { border-radius: .4rem 0 0 .4rem; }
-        }
-    </style>
 </head>
 <body data-bs-theme="light" class="px-2 min-vh-100 d-flex flex-column">
     <nav class="container navbar navbar-expand-md navbar-dark text-bg-dark fixed-top mx-auto rounded-bottom">
@@ -64,7 +46,7 @@
         </div>
     </header>
  
-<main class="container d-flex flex-column flex-md-row p-0 flex-grow-1">
+<main class="container d-flex flex-column flex-md-row p-0 flex-grow-1 gap-3">
     <div class="main-article-section bg-light p-3 flex-fill flex-grow-1">
         {% block content %}{% endblock %}
     </div>

@@ -21,10 +21,10 @@
 {% block aside %}
 
 {# Imagem padrão caso o usuário não tenha imagem. #}
-{% static 'img/anonimous.jpg' as default_image %}
+
 <aside>
     <h5>{{ post.user.name|default:post.user.username }}</h5>
-    <img src="{{ post.user.image|default:default_image }}" alt="{{ post.user.name }}"
+    <img src="{{ post.user.image_url }}" alt="{{ post.user.name }}"
         class="img-fluid rounded mx-auto d-block mt-2">
     <small class="d-block text-center mt-2">Membro desde {{ post.user.date_joined|date:"d/m/Y" }}</small>
 </aside>

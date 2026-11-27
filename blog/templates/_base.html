@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-{% static 'img/anonimous.jpg' as default_image %}
 <html lang="pt-BR">
 
 <head>
@@ -39,7 +38,7 @@
                     {% if request.user.is_authenticated %}
 
                     <a href="{% url 'profile' %}" class="d-flex align-items-center">
-                        <img src="{{ user.image|default:default_image }}" alt="{{ user.name|default:user.username }}" class="rounded-circle d-block me-2" referrerpolicy="no-referrer">
+                        <img src="{{ user.image_url }}" alt="{{ user.name|default:user.username }}" class="rounded-circle d-block me-2" referrerpolicy="no-referrer">
                         <span>Perfil</span>
                     </a>
 
@@ -68,7 +67,7 @@
         </div>
     </header>
 
-    <main class="container d-flex flex-column flex-md-row p-0 flex-grow-1">
+    <main class="container d-flex flex-column flex-md-row p-0 flex-grow-1 gap-3">
         <div class="main-article-section bg-light p-3 flex-fill flex-grow-1">
             {% if messages %}
             {% for message in messages %}

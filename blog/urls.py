@@ -9,4 +9,5 @@ urlpatterns = [
     path('post/<int:id>/', views.post_detail, name='post_detail'),  # Página do post completo
     path('login/', views.login_view, name='login'),                 # Login do usuário
     path('profile/', views.profile, name='profile'),                # Perfil do usuário logado
+    path('profile/edit/', views.edit_profile, name='edit_profile'), # Editar perfil do usuário logado
 ]

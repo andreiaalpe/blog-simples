@@ -10,6 +10,6 @@ urlpatterns = [
     # Adiciona as URLS de 'blog' ao projeto
     path('', include('blog.urls')),
 
-    # Logout do usuário
+    # Logout / Sair da conta
     path('logout/', LogoutView.as_view(next_page='home'), name='logout'),
 ]
